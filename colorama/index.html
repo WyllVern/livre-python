@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>colorama &#8212; Bibliothèques Python 0.1.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="hug" href="../hug/index.html" />
+    <link rel="prev" title="Creative Commons Attribution-ShareAlike 4.0 International" href="../licence.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="colorama">
+<span id="colorama-tutorial"></span><h1><code class="docutils literal"><span class="pre">colorama</span></code><a class="headerlink" href="#colorama" title="Permalink to this headline">¶</a></h1>
+<p>Par Killian Castella <a class="footnote-reference" href="#contact" id="id1">[1]</a></p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Les caractères d&#8217;échappement ANSI sont depuis longtemps utilisé pour produire des terminaux colorés et déplacer le curseur d&#8217;écriture dans les terminaux Unix.
+Seulement, ces caractères d&#8217;échappement ne sont pas compatibles avec le terminal natif de Windows.
+La bibliothèque externe de python Colorama est la pour palier à ce problème en convertissant ces caractères en appels win32 appropriés.</p>
+<p>Grace à Colorama il est possible d&#8217;utiliser de nombreuses bibliothèques se basant sur Les caractères d&#8217;échappement ANSI d’être utilisées sur Windows.</p>
+<p>Pour résumer, Colorama est une bibliothèque python multiplateforme pour afficher des terminaux colorés en Python.</p>
+</div>
+<div class="section" id="exemples">
+<h2>Exemples<a class="headerlink" href="#exemples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fonctionalites-de-base">
+<h3>Fonctionalités de base<a class="headerlink" href="#fonctionalites-de-base" title="Permalink to this headline">¶</a></h3>
+<p>Pour commencer avant d&#8217;utiliser colorama il faut importer les fonctionnalités désirées et initialiser colorama :</p>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">colorama</span> <span class="kn">import</span> <span class="n">Fore</span><span class="p">,</span> <span class="n">Back</span><span class="p">,</span> <span class="n">Style</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">init</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>On peut ensuite utiliser les diverses fonctionnalités :</p>
+<ul class="simple">
+<li>Fore : Permet de changer la couleur de l&#8217;arrière-plan.</li>
+<li>Back : Permet de changer la couleur de l&#8217;écriture.</li>
+<li>Style : Permet de changer la brillance de la police</li>
+</ul>
+<p>Et la liste des attributs associés :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fore</span><span class="p">:</span> <span class="n">BLACK</span><span class="p">,</span> <span class="n">RED</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">,</span> <span class="n">YELLOW</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">,</span> <span class="n">MAGENTA</span><span class="p">,</span> <span class="n">CYAN</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">,</span> <span class="n">RESET</span><span class="o">.</span>
+<span class="n">Back</span><span class="p">:</span> <span class="n">BLACK</span><span class="p">,</span> <span class="n">RED</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">,</span> <span class="n">YELLOW</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">,</span> <span class="n">MAGENTA</span><span class="p">,</span> <span class="n">CYAN</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">,</span> <span class="n">RESET</span><span class="o">.</span>
+<span class="n">Style</span><span class="p">:</span> <span class="n">DIM</span><span class="p">,</span> <span class="n">NORMAL</span><span class="p">,</span> <span class="n">BRIGHT</span><span class="p">,</span> <span class="n">RESET_ALL</span>
+</pre></div>
+</div>
+<p>Utilisation :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Modification des styles.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">colorama</span> <span class="k">import</span> <span class="n">Back</span><span class="p">,</span> <span class="n">Fore</span><span class="p">,</span> <span class="n">Style</span><span class="p">,</span> <span class="n">deinit</span><span class="p">,</span> <span class="n">init</span>
+<span class="n">init</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Fore</span><span class="o">.</span><span class="n">RED</span> <span class="o">+</span> <span class="n">Style</span><span class="o">.</span><span class="n">NORMAL</span> <span class="o">+</span> <span class="s1">&#39;Un texte rouge&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Back</span><span class="o">.</span><span class="n">WHITE</span> <span class="o">+</span> <span class="s1">&#39;Avec un fond blanc&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Style</span><span class="o">.</span><span class="n">BRIGHT</span> <span class="o">+</span> <span class="s1">&#39;Plus lumineux !&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Style</span><span class="o">.</span><span class="n">RESET_ALL</span> <span class="o">+</span> <span class="s1">&#39;Retour à la normale&#39;</span><span class="p">)</span>
+
+<span class="n">deinit</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Résultat  :</dt>
+<dd><img alt="Texte mis en forme avec couleurs" class="first last" src="../_images/CommandeBase.PNG" />
+</dd>
+</dl>
+<p>Pour arrêter colorama avant la fin du programme il suffit d&#8217;appeler deinit() :</p>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">deinit</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Avant l’arrêt, Colorama va appeler Style.RESET_ALL afin de rétablir le style initial.</p>
+</div>
+<div class="section" id="deplacement-du-curseur">
+<h3>Déplacement du curseur<a class="headerlink" href="#deplacement-du-curseur" title="Permalink to this headline">¶</a></h3>
+<p>Il est également possible d&#8217;utiliser les sequences ANSI directement dans notre code , c&#8217;est de cette manière que nous pouvons également déplacer le curseur.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Déplacement du curseur.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">colorama</span> <span class="k">import</span> <span class="n">deinit</span><span class="p">,</span> <span class="n">init</span>
+<span class="n">init</span><span class="p">()</span>
+
+<span class="c1"># ici on définit notre style</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[33;42;1m&#39;</span><span class="p">)</span>
+
+<span class="c1"># deplacement du curseur à l&#39;aide de n lignes</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[3B&#39;</span><span class="o">+</span><span class="s1">&#39;3 lignes plus bas&#39;</span><span class="p">)</span>
+
+<span class="c1"># deplacement du curseur à l&#39;aide de n lignes</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[20C&#39;</span><span class="o">+</span><span class="s1">&#39;20 caractères plus loin&#39;</span><span class="p">)</span>
+
+<span class="c1"># deplacement du curseur à l&#39;aide de coordonnées</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[15;10f&#39;</span><span class="o">+</span><span class="s1">&#39;Selon coordonées&#39;</span><span class="p">)</span>
+
+<span class="n">deinit</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>\033 correspond au code octal en style C pour le caractère ESC. Les caractères qui se trouvent après le &#8216;[&#8216; sont les séquences ANSI.</p>
+<dl class="docutils">
+<dt>Résultat  :</dt>
+<dd><img alt="Texte placé à divers endroit selon le code ci-dessus" class="first last" src="../_images/CursorPositioning.png" />
+</dd>
+</dl>
+<p>Colorama ne convertit qu&#8217;une partie des séquences ANSI en appel win32. la liste des séquences prises en charge se trouve <a class="reference external" href="https://github.com/tartley/colorama#recognised-ansi-sequences">ici</a>.</p>
+</div>
+<div class="section" id="utilisation-d-une-bibliotheque-utilisant-les-caracteres-d-echappement-ansi">
+<h3>Utilisation d&#8217;une bibliothèque utilisant les caractères d&#8217;échappement ANSI<a class="headerlink" href="#utilisation-d-une-bibliotheque-utilisant-les-caracteres-d-echappement-ansi" title="Permalink to this headline">¶</a></h3>
+<p>Certaines bibliothèques se basent sur les séquences ANSI pour colorer les terminaux et ne sont donc pas fonctionelles avec windows, Ici un exemple d&#8217;utilisation de termcolor sous windows :</p>
+<blockquote>
+<div><img alt="affichage de termcolor non interpreté" src="../_images/termcolorWithoutColorama.png" />
+</div></blockquote>
+<p>On voit bien que tout n&#8217;est pas interpreté comme il se doit, C&#8217;est la qu&#8217;entre en jeu Colorama qui permet d&#8217;interpreter correctement ces séquences :</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Utilisation de termcolor sous Windows.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">colorama</span> <span class="k">import</span> <span class="n">init</span>
+<span class="kn">from</span> <span class="nn">termcolor</span> <span class="k">import</span> <span class="n">colored</span>
+
+<span class="c1"># use Colorama to make Termcolor work on Windows too</span>
+<span class="n">init</span><span class="p">()</span>
+
+<span class="c1"># then use Termcolor for all colored text output</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">colored</span><span class="p">(</span><span class="s1">&#39;Text from termcolor on Windows&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;on_yellow&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Ce qui nous donne :</p>
+<blockquote>
+<div><img alt="affichage de termcolor correctement interpreté" src="../_images/termcolor.png" />
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>Colorama est une bibliothèque très simple d&#8217;utilisation et très utile pour faire fonctionner diverses autres bibliothèques se basant sur les séquences ANSI sous Windows.
+Il est également possible de l&#8217;utiliser en stand-alone pour certaines applications simples.
+Malheureusement en l&#8217;état actuel, il y a encore un grand nombre de séquences non prises en charge, ceci est toutefois probablement amené à changer étant donné que Colorama est mis à jour régulièrement.</p>
+<table class="docutils footnote" frame="void" id="contact" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>&lt;<a class="reference external" href="mailto:killian&#46;castella&#37;&#52;&#48;he-arc&#46;ch">killian<span>&#46;</span>castella<span>&#64;</span>he-arc<span>&#46;</span>ch</a>&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">colorama</span></code></a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#exemples">Exemples</a><ul>
+<li><a class="reference internal" href="#fonctionalites-de-base">Fonctionalités de base</a></li>
+<li><a class="reference internal" href="#deplacement-du-curseur">Déplacement du curseur</a></li>
+<li><a class="reference internal" href="#utilisation-d-une-bibliotheque-utilisant-les-caracteres-d-echappement-ansi">Utilisation d&#8217;une bibliothèque utilisant les caractères d&#8217;échappement ANSI</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../licence.html" title="Chapitre précédent">Creative Commons Attribution-ShareAlike 4.0 International</a></li>
+      <li>Next: <a href="../hug/index.html" title="Chapitre suivant"><code class="docutils literal"><span class="pre">hug</span></code></a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/colorama/index.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016-2017, HE-Arc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/colorama/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
