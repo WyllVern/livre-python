@@ -86,16 +86,27 @@ Exemples:
 
 Petit lecteur audio simple
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+<<<<<<< HEAD
 Cet exemple est inspiré du `tutoriel Openclassroom <https://openclassrooms.com/courses/interface-graphique-pygame-pour-python/le-son-5>`_
 
+=======
+Cet exemple provient du `tutoriel OpenClassrooms`_
+>>>>>>> amélioration de l'exemple du lecteur audio
 .. literalinclude:: exemple/mixerEx.py
 
 Dans cet exemple, plusieurs modules sont utilisés, notamment: pygame.mixer, qui est utilisé pour la gestion de sons, pygame.event, qui est utilisé pour la gestion des touches au clavier, pygame.draw, pour dessiner les boutons et pygame.mouse, pour récupérer les coordonnées de la souris.
 Ici, on a créé un petit lecteur audio. Lorsque l'on appuie sur play/stop, le son de lance/s'arrête.
 pour créer les boutons, on a utilisé la fonction de dessin de pygame.draw.
 pour l'illumination des boutons au passage de la souris, il faut récupérer la position de la souris, et la comparer avec la zone dans laquelle est dessinée le rectangle.
+<<<<<<< HEAD
 
 résultat:
+=======
+
+résultat:
+
+.. image:: exemple/LecteurAudio.PNG
+>>>>>>> amélioration de l'exemple du lecteur audio
 
 .. image:: exemple/LecteurAudio.PNG
 
