@@ -1,4 +1,4 @@
-======================
+﻿======================
  Bibliothèques Python
 ======================
 
@@ -7,52 +7,89 @@
 Table des matières
 ==================
 
+Bases
+-----
+
 .. toctree::
    :maxdepth: 1
 
-   builtins/index.rst
-   dunders/index.rst
-   super/index.rst
-   fstrings/index.rst
-   email/index.rst
-   abc/index.rst
-   collections/index.rst
-   csv/index.rst
-   hashlib/index.rst
-   io/index.rst
-   itertools/index.rst
-   invoke/index.rst
-   json/index.rst
-   math/index.rst
-   multiprocessing/index.rst
-   re/index.rst
-   secrets/index.rst
-   statistics/index.rst
-   random/index.rst
-   time/index.rst
-   unittest/index.rst
-   weakref/index.rst
-   licence.rst
-   colorama/index.rst
-   hug/index.rst
-   invoke/index.rst
-   matplotlib/index.rst
-   pillow/index.rst
-   pycrypto/index.rst
-   pygame/index.rst
-   pytest/index.rst
-   sphinx/index.rst
-   watchdog/index.rst
-   datetime/index.rst
-   binary/index.rst
+   builtins/index
+   collections/index
+   datetime/index
+   dunders/index
+   enum/index
+   fstrings/index
+   itertools/index
+   io/index
+   math/index
+   random/index
+   time/index
+   statistics/index
+   super/index
 
+Avancé
+------
+
+.. toctree::
+   :maxdepth: 1
+
+   abc/index
+   binary/index
+   email/index
+   hashlib/index
+   multiprocessing/index
+   re/index
+   secrets/index
+   weakref/index
+
+Ligne de commande
+-----------------
+
+.. toctree::
+   :maxdepth: 1
+
+   colorama/index
+   invoke/index
+
+Tests
+-----
+
+.. toctree::
+   :maxdepth: 1
+
+   unittest/index
+   pytest/index
+
+Traitement des données
+----------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   csv/index
+   json/index
+   pillow/index
+
+Autres
+------
+
+.. toctree::
+   :maxdepth: 1
+
+   hug/index
+   matplotlib/index
+   networkx/index
+   pycrypto/index
+   pygame/index
+   sphinx/index
+   watchdog/index
 
 À propos de ce livre
 ====================
 
 :Auteurs:
 
- - Adrien Mendes <adrien.mendes@he-arc.ch>
+ - Adrien Ferreira Mendes <adrien.mendes@he-arc.ch>
  - André Neto Da Silva <andre.netodasilva@he-arc.ch>
  - Anthony Fleury <anth.fleury@gmail.com>
  - Anthony Gillioz <anthony.gillioz@he-arc.ch>
@@ -61,6 +98,7 @@ Table des matières
  - Christophe Hirschi <christophe.hirshi@he-arc.ch>
  - Cédric Pahud <cedric.pahud@he-arc.ch>
  - Dany Chea <dany.chea@he-arc.ch>
+ - Deni Gahlinger <deni.gahlinger@he-arc.ch>
  - Dylan Santos de Pinho <dylan.santosdeppinho@he-arc.ch>
  - Florian Fasmeyer <florian.fasmeyer@he-arc.ch>
  - Gabriel Griesser <gabriel.griesser@he-arc.ch>
@@ -76,6 +114,7 @@ Table des matières
  - Maël Pedretti <mael.pedretti@hotmail.fr>
  - Marc Friedli <marc.friedli@he-arc.ch>
  - Mohamed Jmaa <mohamed.jmaa@he-arc.ch>
+ - Nicolas Beyeler <nicolas.beyeler@pindex.ch>
  - Nicolas Kaser <nicolas.kaser@he-arc.ch>
  - Paul Jeanbourquin <pa.jeanbourquin@gmail.com>
  - Pedro Costa <pedro.costa@he-arc.ch>
@@ -84,7 +123,7 @@ Table des matières
  - Thibaut Piquerez <thibaut.piquerez@he-arc.ch>
  - Yoan Blanc <yoan.blanc@he-arc.ch>
 
-:Date:  2017-03-16
+:Date:  2017-03-28
 
 :Licence:
         :ref:`licence`

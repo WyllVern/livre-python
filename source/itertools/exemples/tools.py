@@ -5,7 +5,6 @@ from itertools import count, islice
 liste = ["I", "do", "love", "programming", "in", "Python"]
 for i in liste:
     print(i)
-
 """Création d'un itérateur sur une chaine string."""
 chaine = "Python"
 iterateur = iter(chaine)  # va nous retourner un itérateur sur notre chaine
@@ -34,6 +33,8 @@ class itRevListe:
             raise StopIteration
         self.position -= 1
         return self.liste[self.position]
+
+
 # iterateur_perso_end
 # revlist_begin
 
@@ -48,16 +49,17 @@ class revList(list):
     def __iter__(self):
         """Renvoie notre iterateur perso."""
         return itRevListe(self)
+
+
 # revlist_end
 
-
-liste = revList(list(islice(count(), 0, 10)))
+liste = revList(islice(count(), 0, 10))
 for i in liste:
     print(i)
 
 
 def sayHello(name):
     """SayHello(name)."""
-    yield "Bienvenu, "
+    yield "Bienvenue, "
     yield  # return none
     yield name
