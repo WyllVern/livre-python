@@ -1,4 +1,5 @@
 Sphinx
+sphinxcontrib-trio
 
 # colorama
 colorama
@@ -26,7 +27,7 @@ networkx
 
 # PIL
 Pillow
-#PyQt5
+PyQt5
 
 # pycrypto
 pycrypto

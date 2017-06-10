@@ -1,5 +1,6 @@
 """Module d'exemple struct."""
 
+
 from collections import namedtuple
 from struct import pack, unpack
 
