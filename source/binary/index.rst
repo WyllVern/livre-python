@@ -30,7 +30,6 @@ Le ``b`` est affiché pour bien préciser que c'est une chaine de type bytes.
 
     b'exemple'
 
-
 Accès
 ~~~~~
 
@@ -39,7 +38,6 @@ Accède à la première valeur à la clé 0 donc b'e' dans l'exemple ci-dessus.
 .. code-block:: python
 
     msg[0]
-
 
 opérations
 ~~~~~~~~~~
@@ -54,19 +52,13 @@ Cast int <--> bytes
 
 .. literalinclude:: ./examples/cast_bytes_int.py
 
-Lecture d'un fichier
-
-.. literalinclude:: ./examples/lecture_fichier.py
-
-`Un tableau résumant les opérations standards sur les bytes se trouve sur la documentation officielle <https://docs.python.org/3.1/library/stdtypes.html>`_.
+Un tableau résumant les opérations standards sur les bytes se trouve sur la documentation officielle des :ref:`Built-in Types<python:typebytes>`.
 
 ``bytearray``
 -------------
 
 Le type :py:class:`bytearray` est un tableau de ``bytes`` et contient donc un objet bytes dans chaque clé.
 Il n'y a donc pas de différence un ``bytarray`` est une collection de ``bytes``.
-
-.. Montrez la différence entre les deux, c'est important.
 
 Instanciation
 ~~~~~~~~~~~~~
@@ -93,7 +85,6 @@ En plus des opérations, ci-dessous voir les opérations de bytes ci-dessus.
 
 .. literalinclude:: ./examples/bytearray_cast.py
 
-
 ``memoryview``
 --------------
 
@@ -111,6 +102,8 @@ Opérations
 
 .. literalinclude:: ./examples/memoryview_op.py
 
+Plus d'opérations sur les memoryview dans la documentation des :ref:`Built-in Types <python:typememoryview>`.
+
 Exemple d'utilisation
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -120,28 +113,24 @@ Avec bytearray:
 
 .. literalinclude:: ./examples/memoryview_ex_bytearray.py
 
-
 ``struct``
 ----------
 
-Un :py:mod:`struct` permet de convertir des structures C en valeurs de Python représenté sous forme d'objets bytes.
+Un :py:mod:`struct` permet de convertir des structures C en valeurs Python représenté sous forme d'objets bytes. Ceux-ci sont utilisés pour manipuler des données binaire depuis des fichiers, le réseau ou d'autres sources.
 
 Exemple d'utilisation
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. literalinclude:: ./examples/struct.py
 
-Opérations
-~~~~~~~~~~
-
-Un tableau résumant les opérations standards sur les structures se trouve sur la documentation officielle. :py:mod:`struct`.
-
+Plus d'informations sur les methodes et caractéristiques des :py:mod:`struct`. se trouve sur la documentation officielle.
+	
 Sources
 -------
 
-bytes / bytearray
+:py:class:`bytes` / :py:class:`bytearray`
 
-`<http://docs.python-guide.org/en/latest/scenarios/json/>`_
+:ref:`Built-in Types <python:bltin-types>`.
 
 `<http://stackoverflow.com/questions/16678363/python-3-how-do-i-declare-an-empty-bytes-variable>`_
 
@@ -151,8 +140,7 @@ bytes / bytearray
 
 `<http://stackoverflow.com/questions/7585435/best-way-to-convert-string-to-bytes-in-python-3>`_
 
-
-memoryview
+:py:class:`memoryview`
 
 `<https://docs.python.org/3/library/stdtypes.html?highlight=memoryview#memoryview>`_
 

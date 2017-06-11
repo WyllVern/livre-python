@@ -1,10 +1,7 @@
 
-
 """Exemple d'utilisation: lecteur audio."""
-
 import pygame
 from pygame.locals import K_RETURN, K_SPACE, KEYDOWN, KEYUP, QUIT, RESIZABLE
-
 pygame.init()
 fenetre = pygame.display.set_mode((400, 300))
 son = pygame.mixer.Sound("./exemple/Tinquen.wav")

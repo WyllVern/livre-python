@@ -1,6 +1,6 @@
 """Fichier test processus."""
-from multiprocessing import os
-import Process
+import os
+from multiprocessing import Process
 
 
 def info(title, name):
@@ -14,6 +14,6 @@ def info(title, name):
 
 if __name__ == '__main__':
 
-    p = Process(target=info, args=('main line', 'bob', ))
+    p = Process(target=info, args=('main line', 'bob'))
     p.start()
     p.join()
